@@ -38,6 +38,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
+            this.lblRound = new System.Windows.Forms.Label();
+            this.txtbxRound = new System.Windows.Forms.TextBox();
             this.newProgressBarTimer = new Mahjong_Tournament_Timer.NewProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +51,7 @@
             this.labelTime.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelTime.Font = new System.Drawing.Font("Century Gothic", 240F, System.Drawing.FontStyle.Bold);
             this.labelTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelTime.Location = new System.Drawing.Point(-65, 94);
+            this.labelTime.Location = new System.Drawing.Point(-58, 71);
             this.labelTime.Margin = new System.Windows.Forms.Padding(0);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(1278, 433);
@@ -72,7 +75,7 @@
             this.btnClose.Size = new System.Drawing.Size(50, 50);
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.button1_Click);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnPlay
             // 
@@ -84,7 +87,7 @@
             this.btnPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Location = new System.Drawing.Point(542, 536);
+            this.btnPlay.Location = new System.Drawing.Point(539, 536);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(0);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(50, 50);
@@ -102,7 +105,7 @@
             this.btnPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPause.Location = new System.Drawing.Point(542, 536);
+            this.btnPause.Location = new System.Drawing.Point(539, 536);
             this.btnPause.Margin = new System.Windows.Forms.Padding(0);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(50, 50);
@@ -113,6 +116,7 @@
             // 
             // btnReset
             // 
+            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnReset.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReset.BackgroundImage")));
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -120,7 +124,7 @@
             this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Location = new System.Drawing.Point(9, 9);
+            this.btnReset.Location = new System.Drawing.Point(9, 536);
             this.btnReset.Margin = new System.Windows.Forms.Padding(0);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(50, 50);
@@ -130,12 +134,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(490, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
@@ -162,11 +165,53 @@
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
+            // btnSettings
+            // 
+            this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSettings.BackgroundImage")));
+            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Location = new System.Drawing.Point(1071, 536);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(50, 50);
+            this.btnSettings.TabIndex = 10;
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
+            // lblRound
+            // 
+            this.lblRound.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblRound.AutoSize = true;
+            this.lblRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F);
+            this.lblRound.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblRound.Location = new System.Drawing.Point(408, 60);
+            this.lblRound.Name = "lblRound";
+            this.lblRound.Size = new System.Drawing.Size(229, 76);
+            this.lblRound.TabIndex = 11;
+            this.lblRound.Text = "Round";
+            // 
+            // txtbxRound
+            // 
+            this.txtbxRound.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtbxRound.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbxRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F);
+            this.txtbxRound.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtbxRound.Location = new System.Drawing.Point(647, 60);
+            this.txtbxRound.Name = "txtbxRound";
+            this.txtbxRound.Size = new System.Drawing.Size(154, 76);
+            this.txtbxRound.TabIndex = 12;
+            this.txtbxRound.Text = "1";
+            // 
             // newProgressBarTimer
             // 
             this.newProgressBarTimer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.newProgressBarTimer.ForeColor = System.Drawing.Color.DarkRed;
+            this.newProgressBarTimer.ForeColor = System.Drawing.Color.DimGray;
             this.newProgressBarTimer.Location = new System.Drawing.Point(0, 520);
             this.newProgressBarTimer.Maximum = 7200;
             this.newProgressBarTimer.Name = "newProgressBarTimer";
@@ -181,6 +226,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1130, 595);
+            this.Controls.Add(this.txtbxRound);
+            this.Controls.Add(this.lblRound);
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.newProgressBarTimer);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.pictureBox1);
@@ -195,6 +243,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -209,6 +258,9 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Button btnMinimize;
         private Mahjong_Tournament_Timer.NewProgressBar newProgressBarTimer;
+        private System.Windows.Forms.Button btnSettings;
+        private System.Windows.Forms.Label lblRound;
+        private System.Windows.Forms.TextBox txtbxRound;
     }
 }
 

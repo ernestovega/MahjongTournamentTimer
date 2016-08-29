@@ -12,7 +12,7 @@ namespace Mahjong_Tournament_Timer
     {
         public NewProgressBar()
         {
-            this.SetStyle(ControlStyles.UserPaint, true);
+            SetStyle(ControlStyles.UserPaint, true);
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -22,8 +22,7 @@ namespace Mahjong_Tournament_Timer
             rec.Width = (int)(rec.Width * ((double)Value / Maximum)) - 4;
             if (ProgressBarRenderer.IsSupported)
                 ProgressBarRenderer.DrawHorizontalBar(e.Graphics, e.ClipRectangle);
-            rec.Height = rec.Height - 4;
-            e.Graphics.FillRectangle(Brushes.Gray, 2, 2, rec.Width, rec.Height);
+            e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(96, 96, 96)), 0, 0, rec.Width, rec.Height);
         }
     }
 }

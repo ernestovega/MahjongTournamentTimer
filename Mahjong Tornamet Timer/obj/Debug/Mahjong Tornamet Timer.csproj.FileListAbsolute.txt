@@ -1,0 +1,9 @@
+c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\bin\Debug\Mahjong Tornamet Timer.exe.config
+c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\bin\Debug\Mahjong Tornamet Timer.exe
+c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\bin\Debug\Mahjong Tornamet Timer.pdb
+c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\obj\Debug\Mahjong Tornamet Timer.csprojResolveAssemblyReference.cache
+c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\obj\Debug\Mahjong_Tornamet_Timer.Properties.Resources.resources
+c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\obj\Debug\Mahjong Tornamet Timer.csproj.GenerateResource.Cache
+c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\obj\Debug\Mahjong Tornamet Timer.exe
+c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\obj\Debug\Mahjong Tornamet Timer.pdb
+c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\obj\Debug\Mahjong_Tornamet_Timer.formTimer.resources

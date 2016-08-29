@@ -6,3 +6,6 @@ c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjon
 c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\obj\Debug\MahjongTournamentTimer.csproj.GenerateResource.Cache
 c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\obj\Debug\Mahjong Tournament Timer.exe
 c:\users\eto\documents\visual studio 2015\Projects\Mahjong Tornamet Timer\Mahjong Tornamet Timer\obj\Debug\Mahjong Tournament Timer.pdb
+C:\Users\Eto\Documents\Visual Studio 2015\Projects\MahjongTornamentTimer\Mahjong Tornamet Timer\bin\Debug\Mahjong Tournament Timer.exe.config
+C:\Users\Eto\Documents\Visual Studio 2015\Projects\MahjongTornamentTimer\Mahjong Tornamet Timer\obj\Debug\Mahjong Tournament Timer.exe
+C:\Users\Eto\Documents\Visual Studio 2015\Projects\MahjongTornamentTimer\Mahjong Tornamet Timer\obj\Debug\Mahjong Tournament Timer.pdb

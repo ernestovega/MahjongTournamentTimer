@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Mahjong_Tornamet_Timer
@@ -112,6 +106,15 @@ namespace Mahjong_Tornamet_Timer
             prompt.AcceptButton = confirmation;
 
             return prompt.ShowDialog() == DialogResult.OK ? (int)numUpDown.Value : 0;
+        }
+
+        private void txtbxRound_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)//If Enter pressed, hide caret
+            {
+                txtbxRound.Enabled = false;
+                txtbxRound.Enabled = true;
+            }
         }
     }
 }

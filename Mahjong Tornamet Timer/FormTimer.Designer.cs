@@ -206,6 +206,7 @@
             this.txtbxRound.Size = new System.Drawing.Size(154, 76);
             this.txtbxRound.TabIndex = 12;
             this.txtbxRound.Text = "1";
+            this.txtbxRound.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxRound_KeyPress);
             // 
             // newProgressBarTimer
             // 

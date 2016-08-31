@@ -20,8 +20,8 @@ namespace Mahjong_Tournament_Timer
             Rectangle rec = e.ClipRectangle;
 
             rec.Width = (int)(rec.Width * ((double)Value / Maximum)) - 4;
-            if (ProgressBarRenderer.IsSupported)
-                ProgressBarRenderer.DrawHorizontalBar(e.Graphics, e.ClipRectangle);
+            //if (ProgressBarRenderer.IsSupported)
+            //    ProgressBarRenderer.DrawHorizontalBar(e.Graphics, e.ClipRectangle);
             e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(96, 96, 96)), 0, 0, rec.Width, rec.Height);
         }
     }

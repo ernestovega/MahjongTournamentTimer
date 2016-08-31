@@ -1,23 +1,26 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Mahjong_Tornamet_Timer
 {
     public partial class formTimer : Form
     {
+        private int fontSize;
         private long maxTime;
         private long timeLeft;
 
         public formTimer()
         {
             InitializeComponent();
-            labelTime.Font = new Font("Gang Of Three", 240, FontStyle.Regular);
+            fontSize = 240;
+            lblTime.Font = new Font("Gang Of Three", fontSize, FontStyle.Regular);
             lblRound.Font = new Font("Gang Of Three", 50, FontStyle.Regular);
             txtbxRound.Font = new Font("Gang Of Three", 50, FontStyle.Regular);
             maxTime = 7200;
             timeLeft = maxTime;
-            labelTime.Text = TimeSpan.FromSeconds(timeLeft).ToString();
+            lblTime.Text = TimeSpan.FromSeconds(timeLeft).ToString();
             newProgressBarTimer.Maximum = (int)maxTime;
         }
 
@@ -38,6 +41,8 @@ namespace Mahjong_Tornamet_Timer
             btnPause.Visible = true;
             btnSettings.Visible = false;
             btnReset.Visible = false;
+            btnZoomIn.Visible = false;
+            btnZoomOut.Visible = false;
         }
 
         private void btnPause_Click(object sender, EventArgs e)
@@ -47,22 +52,44 @@ namespace Mahjong_Tornamet_Timer
             btnPlay.Visible = true;
             btnSettings.Visible = true;
             btnReset.Visible = true;
+            btnZoomIn.Visible = true;
+            btnZoomOut.Visible = true;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            timeLeft = 7200;
-            labelTime.Text = TimeSpan.FromSeconds(timeLeft).ToString();
+            timeLeft = maxTime;
+            lblTime.Text = TimeSpan.FromSeconds(timeLeft).ToString();
+            lblTime.ForeColor = Color.FromArgb(64, 64, 64);
             newProgressBarTimer.Value = 0;
+            if (btnReplay.Visible == true)
+            {
+                btnReplay.Visible = false;
+                btnPlay.Visible = true;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             timeLeft--;
-            labelTime.Text = TimeSpan.FromSeconds(timeLeft).ToString();
+            lblTime.Text = TimeSpan.FromSeconds(timeLeft).ToString();
             newProgressBarTimer.Value = (int)(maxTime - timeLeft);
-            if (timeLeft == 0)
+            if(timeLeft == 900 && maxTime >= 3600)
+            {
+                lblTime.ForeColor = Color.Red;
+                
+            }
+            if (timeLeft <= 0)
+            {
                 timer.Stop();
+                btnPause.Visible = false;
+                btnPlay.Visible = true;
+                btnReplay.Visible = true;
+                btnSettings.Visible = true;
+                btnReset.Visible = true;
+                btnZoomIn.Visible = true;
+                btnZoomOut.Visible = true;
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -75,11 +102,7 @@ namespace Mahjong_Tornamet_Timer
             int minutos = ShowDialog("Remaining time", "Enter remaining time in minutes:", (int)(maxTime / 60));
             if (minutos <= 0) return;
             maxTime = minutos * 60;
-            if (minutos == 1440) maxTime--;
-            timeLeft = maxTime;
-            newProgressBarTimer.Maximum = (int)maxTime;
-            newProgressBarTimer.Value = 0;
-            labelTime.Text = TimeSpan.FromSeconds(timeLeft).ToString();
+            btnReset_Click(null, null);
         }
 
         public static int ShowDialog(string title, string message, int value)
@@ -114,6 +137,62 @@ namespace Mahjong_Tornamet_Timer
             {
                 txtbxRound.Enabled = false;
                 txtbxRound.Enabled = true;
+            }
+        }
+
+        private void btnZoomIn_Click(object sender, EventArgs e)
+        {
+            fontSize = fontSize < 395 ? fontSize + 5 : fontSize;
+            lblTime.Font = new Font("Gang Of Three", fontSize, FontStyle.Regular);
+        }
+
+        private void btnZoomOut_Click(object sender, EventArgs e)
+        {
+
+            fontSize = fontSize > 5 ? fontSize - 5 : fontSize;
+            lblTime.Font = new Font("Gang Of Three", fontSize, FontStyle.Regular);
+        }
+
+        private void btnReplay_Click(object sender, EventArgs e)
+        {
+            btnReset_Click(null, null);
+            btnPlay_Click(null, null);
+            btnReplay.Visible = false;
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState != FormWindowState.Maximized)
+            {
+                WindowState = FormWindowState.Maximized;
+                btnMaximize.BackgroundImage = Mahjong_Tournament_Timer.
+                    Properties.Resources.icon_normalize;
+                fontSize = 360;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+                btnMaximize.BackgroundImage = Mahjong_Tournament_Timer.
+                    Properties.Resources.icon_maximize;
+                fontSize = 240;
+            }
+            lblTime.Font = new Font("Gang Of Three", fontSize, FontStyle.Regular);
+        }
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private void Form1_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
     }

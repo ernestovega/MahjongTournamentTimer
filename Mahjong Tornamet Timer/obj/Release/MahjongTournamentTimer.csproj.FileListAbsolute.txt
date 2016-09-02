@@ -1,7 +1,7 @@
 C:\Users\Eto\Documents\Visual Studio 2015\Projects\MahjongTornamentTimer\Mahjong Tornamet Timer\bin\Release\Mahjong Tournament Timer.exe.config
 C:\Users\Eto\Documents\Visual Studio 2015\Projects\MahjongTornamentTimer\Mahjong Tornamet Timer\bin\Release\Mahjong Tournament Timer.exe
 C:\Users\Eto\Documents\Visual Studio 2015\Projects\MahjongTornamentTimer\Mahjong Tornamet Timer\bin\Release\Mahjong Tournament Timer.pdb
-C:\Users\Eto\Documents\Visual Studio 2015\Projects\MahjongTornamentTimer\Mahjong Tornamet Timer\obj\Release\Mahjong_Tornamet_Timer.formTimer.resources
+C:\Users\Eto\Documents\Visual Studio 2015\Projects\MahjongTornamentTimer\Mahjong Tornamet Timer\obj\Release\Mahjong_Tornamet_Timer.MainForm.resources
 C:\Users\Eto\Documents\Visual Studio 2015\Projects\MahjongTornamentTimer\Mahjong Tornamet Timer\obj\Release\Mahjong_Tournament_Timer.Properties.Resources.resources
 C:\Users\Eto\Documents\Visual Studio 2015\Projects\MahjongTornamentTimer\Mahjong Tornamet Timer\obj\Release\MahjongTournamentTimer.csproj.GenerateResource.Cache
 C:\Users\Eto\Documents\Visual Studio 2015\Projects\MahjongTornamentTimer\Mahjong Tornamet Timer\obj\Release\Mahjong Tournament Timer.exe

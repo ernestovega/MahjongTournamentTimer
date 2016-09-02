@@ -16,7 +16,7 @@ namespace Mahjong_Tornamet_Timer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formTimer());
+            Application.Run(new MainForm());
         }
     }
 }

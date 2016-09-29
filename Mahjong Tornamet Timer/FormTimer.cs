@@ -86,6 +86,7 @@ namespace Mahjong_Tornamet_Timer
             btnLblTimeRight.Visible = false;
             btnLblTimeDown.Visible = false;
             btnLblTimeLeft.Visible = false;
+            btnLogoSettings.Visible = false;
         }
 
         private void btnPause_Click(object sender, EventArgs e)
@@ -106,6 +107,7 @@ namespace Mahjong_Tornamet_Timer
             btnLblTimeRight.Visible = true;
             btnLblTimeDown.Visible = true;
             btnLblTimeLeft.Visible = true;
+            btnLogoSettings.Visible = true;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -151,6 +153,7 @@ namespace Mahjong_Tornamet_Timer
                 btnLblTimeRight.Visible = true;
                 btnLblTimeDown.Visible = true;
                 btnLblTimeLeft.Visible = true;
+                btnLogoSettings.Visible = true;
             }
         }
 
@@ -264,6 +267,22 @@ namespace Mahjong_Tornamet_Timer
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void btnLogoSetting_Click(object sender, EventArgs e)
+        {
+            string picturePath = string.Empty;
+
+            OpenFileDialog fDialog = new OpenFileDialog();
+            fDialog.Title = "Select a 150 x 150px picture";
+            fDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+            fDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            if (fDialog.ShowDialog() != DialogResult.OK)
+            {
+                return;
+            }
+            picturePath = fDialog.FileName.ToString();
+            imgMMLogo.BackgroundImage = Image.FromFile(picturePath);
         }
     }
 }

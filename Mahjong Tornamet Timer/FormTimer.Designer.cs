@@ -52,6 +52,7 @@
             this.btnLblTimeDown = new System.Windows.Forms.Button();
             this.btnLblTimeLeft = new System.Windows.Forms.Button();
             this.newProgressBarTimer = new Mahjong_Tournament_Timer.NewProgressBar();
+            this.btnLogoSettings = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgMMLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,7 +150,7 @@
             this.imgMMLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgMMLogo.Location = new System.Drawing.Point(12, 12);
             this.imgMMLogo.Name = "imgMMLogo";
-            this.imgMMLogo.Size = new System.Drawing.Size(128, 128);
+            this.imgMMLogo.Size = new System.Drawing.Size(150, 150);
             this.imgMMLogo.TabIndex = 7;
             this.imgMMLogo.TabStop = false;
             this.imgMMLogo.Click += new System.EventHandler(this.imgMMLogo_Click);
@@ -217,7 +218,7 @@
             this.btnZoomIn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnZoomIn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnZoomIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZoomIn.Location = new System.Drawing.Point(1316, 674);
+            this.btnZoomIn.Location = new System.Drawing.Point(1275, 674);
             this.btnZoomIn.Margin = new System.Windows.Forms.Padding(0);
             this.btnZoomIn.Name = "btnZoomIn";
             this.btnZoomIn.Size = new System.Drawing.Size(50, 50);
@@ -235,7 +236,7 @@
             this.btnZoomOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnZoomOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnZoomOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnZoomOut.Location = new System.Drawing.Point(1266, 674);
+            this.btnZoomOut.Location = new System.Drawing.Point(1225, 674);
             this.btnZoomOut.Margin = new System.Windows.Forms.Padding(0);
             this.btnZoomOut.Name = "btnZoomOut";
             this.btnZoomOut.Size = new System.Drawing.Size(50, 50);
@@ -339,7 +340,7 @@
             this.btnLblTimeUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnLblTimeUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnLblTimeUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLblTimeUp.Location = new System.Drawing.Point(1242, 682);
+            this.btnLblTimeUp.Location = new System.Drawing.Point(1340, 682);
             this.btnLblTimeUp.Margin = new System.Windows.Forms.Padding(0);
             this.btnLblTimeUp.Name = "btnLblTimeUp";
             this.btnLblTimeUp.Size = new System.Drawing.Size(12, 12);
@@ -358,7 +359,7 @@
             this.btnLblTimeRight.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnLblTimeRight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnLblTimeRight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLblTimeRight.Location = new System.Drawing.Point(1254, 693);
+            this.btnLblTimeRight.Location = new System.Drawing.Point(1352, 693);
             this.btnLblTimeRight.Margin = new System.Windows.Forms.Padding(0);
             this.btnLblTimeRight.Name = "btnLblTimeRight";
             this.btnLblTimeRight.Size = new System.Drawing.Size(12, 12);
@@ -377,7 +378,7 @@
             this.btnLblTimeDown.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnLblTimeDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnLblTimeDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLblTimeDown.Location = new System.Drawing.Point(1242, 705);
+            this.btnLblTimeDown.Location = new System.Drawing.Point(1340, 705);
             this.btnLblTimeDown.Margin = new System.Windows.Forms.Padding(0);
             this.btnLblTimeDown.Name = "btnLblTimeDown";
             this.btnLblTimeDown.Size = new System.Drawing.Size(12, 12);
@@ -396,7 +397,7 @@
             this.btnLblTimeLeft.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnLblTimeLeft.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnLblTimeLeft.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLblTimeLeft.Location = new System.Drawing.Point(1230, 693);
+            this.btnLblTimeLeft.Location = new System.Drawing.Point(1328, 693);
             this.btnLblTimeLeft.Margin = new System.Windows.Forms.Padding(0);
             this.btnLblTimeLeft.Name = "btnLblTimeLeft";
             this.btnLblTimeLeft.Size = new System.Drawing.Size(12, 12);
@@ -417,6 +418,24 @@
             this.newProgressBarTimer.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.newProgressBarTimer.TabIndex = 9;
             // 
+            // btnLogoSettings
+            // 
+            this.btnLogoSettings.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogoSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogoSettings.BackgroundImage")));
+            this.btnLogoSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogoSettings.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLogoSettings.FlatAppearance.BorderSize = 0;
+            this.btnLogoSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnLogoSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnLogoSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogoSettings.Location = new System.Drawing.Point(12, 12);
+            this.btnLogoSettings.Margin = new System.Windows.Forms.Padding(0);
+            this.btnLogoSettings.Name = "btnLogoSettings";
+            this.btnLogoSettings.Size = new System.Drawing.Size(24, 24);
+            this.btnLogoSettings.TabIndex = 24;
+            this.btnLogoSettings.UseVisualStyleBackColor = false;
+            this.btnLogoSettings.Click += new System.EventHandler(this.btnLogoSetting_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,6 +443,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1375, 733);
+            this.Controls.Add(this.btnLogoSettings);
             this.Controls.Add(this.btnLblTimeLeft);
             this.Controls.Add(this.btnLblTimeDown);
             this.Controls.Add(this.btnLblTimeRight);
@@ -481,6 +501,7 @@
         private System.Windows.Forms.Button btnLblTimeRight;
         private System.Windows.Forms.Button btnLblTimeDown;
         private System.Windows.Forms.Button btnLblTimeLeft;
+        private System.Windows.Forms.Button btnLogoSettings;
     }
 }
 
